@@ -1,5 +1,5 @@
 
-printPyramid(5);
+printPyramid(3);
 
 
 /*
@@ -14,10 +14,21 @@ printPyramid(5);
  *      ######
  */
 function printPyramid(height) {
-    console.log("Uh oh... the pyramid is under construction.");
-    console.log("Check back soon, our developers are hard at work as we speak!");
 
-    // TODO
-    // print that pyramid!
+    var line = "#";
+
+    for (var i = 1; i <= height; i++) {
+
+      for (var j = height - i; j > 0; j--) {
+        line = " " + line;
+      }
+
+      for (var k = i; k > 0; k--) {
+        line += "#"
+      }
+
+      console.log(line);
+      line = "#";
+    }
 
 }
